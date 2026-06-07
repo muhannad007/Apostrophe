@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import { useNavigate } from "react-router-dom";
-// import { useLogin } from "../hooks/useLogin";
-// import { useSignup } from "../hooks/useSignup";
 import logo from "/logo.png";
 import { Mail, Lock, User, ArrowRight } from "lucide-react";
 import {
@@ -37,8 +34,6 @@ const InputField = ({
 );
 
 const Login = () => {
-  // const navigate = useNavigate();
-
   const [isLogin, setIsLogin] = useState(true);
 
   const [name, setName] = useState(null);
@@ -76,17 +71,13 @@ const Login = () => {
   };
 
   const handleLogin = async () => {
-    // await login(email, password);
-    // console.log(isLoadingLogin);
-    // !isLoadingLogin ? navigate("/dashboard") : console.log(isLoginError);
+    validateForm();
   };
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    // validateForm();
     validateForm() &&
       validateEmail(email) &&
-      // setEmailBorderColor("black-border");
       (confirm === password
         ? toggleMode()
         : setBorderColor("border border-red-500"));
