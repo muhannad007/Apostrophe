@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-#root {
+@import "tailwindcss";
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   width: 100%;
-}
+} */
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -29,48 +29,84 @@
   font-variation-settings: "wdth" 100;
 }
 
+.head {
+  width: 70%;
+  background-color: #443199;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .form-container {
-  background-color: white;
   padding: 4em;
+  /* width: 250px; */
+  width: 100%;
+  text-align: center;
+  background: black;
 }
+.form {
+  /* margin: 0 auto; */
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+/* .form h3 {
+  font-size: 4rem;
+  text-align: left;
+  font-size: 1.5rem;
+} */
+/* .button {
+  background-color: #443199;
+  width: 100px;
+} */
+/* input {
+  border: 1;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  width: 100%;
+  font-size: 1.5rem;
+  height: 1.5em;
+  background: black;
+  background: #303030;
+}
+input::placeholder {
+  line-height: normal;
+} */
 
-.form-container {
-  position: relative;
-  border: #1a1a1a solid;
-  width: 250px;
-}
-.form-container:hover {
-  transform: translateY(-10px);
-  transition: transform 1s ease;
-}
-
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   .form-container {
     text-align: left;
+    width: 40%;
   }
   .container {
     display: flex;
-    justify-content: space-around;
+    gap: none;
+    height: 100vh;
   }
 }
 @media (max-width: 800px) {
   .form-container {
     margin: 0 auto;
+    position: relative;
+    align-items: center;
   }
-}
-
-input {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.5rem;
-}
+} */
 
 .icon {
   font-size: 3rem;
   padding: 10px;
+}
+
+.contact {
+  margin-top: 4rem;
 }
 .contact::before {
   content: "";
@@ -85,7 +121,7 @@ input {
   transition: opacity 0.5s ease;
 }
 
-/* button colors */
+/* Background colors */
 .black {
   background-color: black;
 }
@@ -99,4 +135,8 @@ input {
 }
 .black-border {
   border-color: black;
+}
+
+.white-background {
+  background: white;
 }

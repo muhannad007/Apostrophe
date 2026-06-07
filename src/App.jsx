@@ -1,6 +1,6 @@
 import "./App.css";
 import Form from "./components/Form";
-import logo from "/curved.png";
+import Login from "./pages/Login";
 import {
   AiFillFacebook,
   AiFillGithub,
@@ -11,12 +11,13 @@ import {
 function App() {
   return (
     <>
-      <div className="container">
+      <Login />
+      {/* <div className="container white-background">
         <div className="head">
           <h1 className="roboto-bold">Apostrophe</h1>
           <img src={logo} alt="logo" width={150} />
-          <h2 className="roboto-medium">Contact us</h2>
-          <div className="contact">
+          <h2 className="roboto-medium contact">Contact us</h2>
+          <div className="">
             <AiFillFacebook className="icon" />
             <AiFillGithub className="icon" />
             <AiFillLinkedin className="icon" />
@@ -24,9 +25,10 @@ function App() {
           </div>
         </div>
         <div className="form-container">
+          <img src={logo} alt="logo" width={150} />
           <Form />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

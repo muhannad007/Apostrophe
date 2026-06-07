@@ -6,7 +6,7 @@ const Form = () => {
   const [password, setPassword] = useState(null);
   const [conf, setConf] = useState(null);
 
-  const [buttonColor, setButtonColor] = useState("black");
+  // const [buttonColor, setButtonColor] = useState("black");
   const [emailBorderColor, setEmailBorderColor] = useState("black-border");
   const [login, setLogin] = useState("Login");
   const [confBorderColor, setConfBorderColor] = useState("black-border");
@@ -36,20 +36,21 @@ const Form = () => {
         alert("Passwords don't match.");
       } else {
         setConfBorderColor("black-border");
-        setButtonColor("green");
+        // setButtonColor("green");
         setLogin("Successful loign");
       }
     }
   };
   return (
     <>
-      <form className="">
+      <form className="form">
         <h3 className="roboto-medium">Full Name</h3>
         <input
           className=""
           type="text"
           placeholder="Your name"
           onChange={(e) => setName(e.target.value)}
+          value={name}
           required
         />
         <h3 className="roboto-medium">Email</h3>
@@ -63,7 +64,7 @@ const Form = () => {
         <h3 className="roboto-medium">Password</h3>
         <input
           type="password"
-          placeholder="*****"
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           required
         />
@@ -71,11 +72,11 @@ const Form = () => {
         <input
           className={confBorderColor}
           type="password"
-          placeholder="*****"
+          placeholder="Confirm password"
           onChange={(e) => setConf(e.target.value)}
           required
         />
-        <button onClick={(e) => handleClick(e)} className={buttonColor}>
+        <button className="button" onClick={(e) => handleClick(e)}>
           {login}
         </button>
         <br />
