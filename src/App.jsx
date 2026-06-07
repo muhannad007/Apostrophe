@@ -1,5 +1,4 @@
 import "./App.css";
-import Form from "./components/Form";
 import Login from "./pages/Login";
 import {
   AiFillFacebook,
